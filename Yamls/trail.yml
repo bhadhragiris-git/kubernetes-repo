@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: trail-1-pod
+spec:
+  containers:
+    - name: trail-container
+      image: alpline:latest
+      
