@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: trail-rs-1
+  labels:
+    name: trail12
+spec:
+  minReadySeconds: 10
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: alpine
+  template:
+    metadata:
+      labels:
+        app: alpine
+        env: dev
+        version: "1.0"
+    spec:
+      containers: 
+        - name: alpine
+          image: alpine
+         

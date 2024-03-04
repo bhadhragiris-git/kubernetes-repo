@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+meatadata:
+  name: labelspod
+  labels:
+    env: dev
+    app: nginx
+    version: "1.0"
+spec:
+  containers:
+    - name: nginxContai
+      image: nginx
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512Mi

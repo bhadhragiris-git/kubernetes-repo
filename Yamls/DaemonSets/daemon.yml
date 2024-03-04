@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: DaemonSets
+metadata:
+  name: daemon-set
+spec: 
+  minReadySeconds: 10
+  selector: 
+    matchLabels: 
+      app: ds
+  template:
+    metadata:
+      labels: 
+        app: ds
+        version: "1.0"
+        
